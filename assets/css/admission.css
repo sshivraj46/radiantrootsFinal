@@ -485,7 +485,8 @@ body {
 .why .container .section-title p {
 	background: linear-gradient(135deg, var(--pinkc) 0%, var(--secondary-color) 100%);
 	margin: 20px 0px;
-	padding: 20px;
+	padding: 10px 20px;
+	border-radius:10px;
 }
 
 .why .container h3 {
