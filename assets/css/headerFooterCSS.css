@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+}
+
+a,i {
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+  color: rgba(177, 176, 176, 0.808)
+}
+
+:root {
+  /* background Color */
+  --primary-color: #ed1354;
+  --secondary-color: #f7f5dd;
+  --pinkc: #fff4f4;
+
+  /* Text Style */
+  --navfont-font: "Poppins";
+  --secondary-font: "poppins", sans-serif;
+  --primary-text: #021832;
+  --secondary-text: #caaa169;
+  --text-white: #fff;
+  --text-black: #151515;
+  --text-gray: #e4e4e4;
+}
+
+header,
+footer {
+  background: var(--primary-color);
+  user-select: none;
+}
+
+.navFont {
+  font-family: var(--navfont-font);
+  color: white;
+}
+
+/* NavBarCSS Header Start */
+.navLogo {
+  background-color: white;
+  border-radius: 16px;
+}
+
+.navbarmain {
+  box-shadow: 0px 2px 10px 0.01px rgb(121, 117, 117);
+}
+
+.navBtn .nav-link {
+  width: auto;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-style: bold;
+  font-size: 20px;
+  color: white;
+  ;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link div {
+  width: 100%;
+  line-height: inherit;
+  height: inherit;
+  transition: all 0.5s ease;
+}
+
+.nav-link:hover div,
+.nav-link:hover div {
+  transform: translateY(-37px);
+}
+
+.navBtn .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+  /* underline color */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon i {
+  color: white;
+}
+
+.navBtn .nav-link:hover::after,
+.navBtn .nav-link:focus::after {
+  transform: scaleX(1);
+}
+
+.header_wrapper .navbar-toggler {
+  box-shadow: none;
+}
+
+.navbar-toggler i {
+  color: white;
+}
+
+/*Footer CSS*/
+footer {
+  padding: 1% 4% 0% 4%;
+  /* position: relative; */
+}
+
+footer .container-fluid .row>div {
+  position: relative;
+  width: 22vw;
+}
+
+footer .container-fluid .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+
+}
+
+footer .container-fluid .row> :first-child,
+footer .container-fluid .row> :last-child {
+  margin-left: 20px;
+}
+
+.footercontact>div * {
+  margin-top: 16px;
+}
+
+footer i,
+span,
+.flinks,
+a,
+p,
+h5 {
+  color: white;
+}
+
+#footerlinks h5 {
+  text-align: center;
+}
+
+#footerlinks>div {
+  margin-left: 30%;
+}
+
+#footerlinks p a {
+  width: 100%;
+}
+
+#footerlinks p a span {
+  padding: 3px 10px 3px 10px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+#footerlinks p a span:hover,
+#footerlinks p a span:focus {
+  background-color: #b90d41;
+  color: white;
+}
+
+footer .container-fluid .row>div:last-child {
+  padding-left: 4%;
+}
+
+.footercontact div i {
+  padding-top: 5px;
+}
+
+.socialmedialinks {
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in;
+}
+
+.socialmedialinks i {
+  font-size: 35px;
+}
+
+.socialmedialinks:hover {
+  transform: scale(1.2);
+
+}
+
+#dreamtimepng {
+  position: absolute;
+  right: 40px;
+  bottom: -10px;
+  height: 6vw;
+}
+
+footer p,
+.flinks,
+span {
+  font-family: var(--navfont-font);
+  font-size: 16px;
+}
+
+#footeremail {
+  transition: all 0.7s ease;
+}
+
+#footeremail:hover {
+  position: relative;
+  left: 3px;
+  transform: translateX(3px);
+}
+
+footer h4 {
+  padding-bottom: 10px;
+}
+
+#copyright-privacy {
+  border-top: 1px solid #f3f0f37e;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#copyright-privacy span {
+  color: #f3f0f3cc;
+  font-size: 12px;
+  font-family: "Poppins";
+  font-style: it;
+  letter-spacing: 2px;
+}
+
+#copyright-privacy span a {
+  color: #f3f0f3cc;
+  display: inline-block;
+  left: 10px;
+  line-height: 1;
+  transition: all 0.3s ease;
+
+}
+
+#copyright-privacy span a:hover {
+  transform: translateX(10px);
+  color: white;
+}
+
+/*Footer Waves CSS*/
+.waves {
+  position: relative;
+  width: 100%;
+  height: 10vw;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: -2px;
+  width: 100vw;
+}
+
+.wave1 {
+  opacity: 1;
+  animation: waveAnim1 6s linear infinite;
+  animation-delay: 0s;
+}
+
+.wave2 {
+  opacity: 1;
+  animation: waveAnim2 6s linear infinite;
+  animation-delay: 0s;
+  left: -1px;
+}
+
+.wave3 {
+  opacity: 0.5;
+  animation: waveAnim3 8s linear infinite;
+}
+
+.wave4 {
+  opacity: 0.5;
+  animation: waveAnim4 8s linear infinite;
+}
+
+.wave5 {
+  opacity: 0.3;
+  animation: waveAnim5 7s linear infinite;
+}
+
+.wave6 {
+  opacity: 0.3;
+  animation: waveAnim6 7s linear infinite;
+}
+
+
+@keyframes waveAnim1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes waveAnim2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes waveAnim3 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes waveAnim4 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes waveAnim5 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes waveAnim6 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/*---------------------------Responsive CSS-------------------------------*/
+
+
+/* Styles for small devices like phones */
+@media only screen and (max-width: 600px) {
+
+  /*Nav Header BarCSS*/
+  .navLogo {
+    height: 40px;
+  }
+
+  .navBtn .nav-link {
+    font-size: 12.8px;
+    text-align: start;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .navBtn .nav-link:hover {
+    transform: translate3d(10px, 0px, 0px);
+  }
+
+  .navBtn .nav-link :first-child {
+    padding-left: 6px;
+  }
+
+  .nav-item {
+    min-width: 225px;
+    height: 30px;
+  }
+
+  .nav-link .icon {
+    display: none;
+  }
+
+  .nav-link div {
+    transition: none;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .nav-link:hover div {
+    transform: none;
+  }
+
+  .navBtn .nav-link::after {
+    content: none;
+  }
+
+
+  /*Footer CSS*/
+  footer .container-fluid .row>div {
+    width: 100vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.726);
+    margin: 10px 0px;
+  }
+
+  footer .container-fluid .row>div:last-child {
+    border-bottom: none !important;
+  }
+
+  footer .container-fluid .row {
+    flex-direction: column;
+  }
+
+  footer .container-fluid .row> :first-child,
+  footer .container-fluid .row> :last-child {
+    margin-left: 0px;
+  }
+
+  .footercontact>div * {
+    margin-top: 4px;
+    padding-bottom: 7px;
+  }
+
+  footer p,
+  .flinks,
+  span {
+    font-family: var(--navfont-font);
+    font-size: 13px;
+  }
+
+  footer h4 {
+    padding-bottom: 3px;
+  }
+
+  #footerlinks h5 {
+    text-align: left;
+  }
+
+  #footerlinks>div {
+    margin-left: 0%;
+  }
+
+  #footerlinks {
+    text-align: left;
+    margin: 0px;
+  }
+
+  #footerlinks p a {
+    margin-left: 4px;
+  }
+
+  .socialmedialinks i {
+    font-size: 20px;
+  }
+
+  #dreamtimepng {
+    height: 14vw;
+    right: 10px;
+    bottom: -26px;
+  }
+
+  #copyright-privacy span,
+  #copyright-privacy a {
+    font-size: 5px;
+  }
+
+
+}
+
+/* Styles for medium devices like tablets (portrait) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+  /*Nav Header BarCSS*/
+  .navLogo {
+    height: 50px;
+  }
+
+  .navBtn .nav-link {
+    font-size: 15px;
+    text-align: start;
+    padding-left: 20px;
+    transition: all 0.7s ease-in-out;
+  }
+
+  .navBtn .nav-link:hover {
+    transform: translate3d(10px, 0px, 0px);
+  }
+
+  .navBtn .nav-link :first-child {
+    padding-left: 6px;
+  }
+
+  .nav-item {
+    width: 30%;
+    height: 30px;
+  }
+
+  .nav-link .icon {
+    display: none;
+  }
+
+  .nav-link div {
+    transition: none;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .nav-link:hover div {
+
+    transform: none;
+  }
+
+  .navBtn .nav-link::after {
+    position: absolute;
+    bottom: 7px;
+  }
+
+
+  /*Foote CSS*/
+  footer .container-fluid .row>div {
+    width: 100vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.726);
+    margin: 10px 0px;
+  }
+
+  footer .container-fluid .row>div:last-child {
+    border-bottom: none !important;
+  }
+
+  footer .container-fluid .row {
+    flex-direction: column;
+  }
+
+  footer .container-fluid .row> :first-child,
+  footer .container-fluid .row> :last-child {
+    margin-left: 0px;
+  }
+
+  .footercontact>div * {
+    margin-top: 4px;
+    padding-bottom: 7px;
+  }
+
+  footer p,
+  .flinks,
+  span {
+    font-family: var(--navfont-font);
+    font-size: 15px;
+  }
+
+  footer h4 {
+    padding-bottom: 3px;
+  }
+
+  #footerlinks h5 {
+    text-align: left;
+  }
+
+  #footerlinks>div {
+    margin-left: 0%;
+  }
+
+  #footerlinks {
+    text-align: left;
+    margin: 0px;
+  }
+
+  #footerlinks p a {
+    margin-left: 4px;
+  }
+
+  .socialmedialinks i {
+    font-size: 20px;
+  }
+
+  #dreamtimepng {
+    height: 8vw;
+    right: 10px;
+    bottom: -26px;
+  }
+
+  #copyright-privacy span,
+  #copyright-privacy a {
+    font-size: 5px;
+  }
+
+}
+
+
+/* Styles for tablets (landscape) or small laptops */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+
+  /*Nav Header BarCSS*/
+  .navLogo {
+    height: 60px;
+  }
+
+  .navBtn .nav-link {
+    font-size: 15px;
+    text-align: start;
+  }
+
+  .navBtn .nav-link :first-child {
+    padding-left: 6px;
+  }
+
+  /*NavBarCSS*/
+  .navLogo {
+    height: 50px;
+  }
+
+  .navBtn .nav-link :first-child {
+    padding-left: 6px;
+  }
+
+  .nav-item {
+    width: 30%;
+    height: 30px;
+  }
+
+  .nav-link .icon {
+    display: none;
+  }
+
+  .nav-link div {
+    transition: none;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .nav-link:hover div {
+    transform: none;
+  }
+
+  .navBtn .nav-link::after {
+    position: absolute;
+    bottom: 7px;
+  }
+
+
+  /*Foote CSS*/
+  footer .container-fluid .row>div {
+    width: 100vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.726);
+    margin: 10px 0px;
+  }
+
+  footer .container-fluid .row>div:last-child {
+    border-bottom: none !important;
+  }
+
+  footer .container-fluid .row {
+    flex-direction: column;
+  }
+
+  footer .container-fluid .row> :first-child,
+  footer .container-fluid .row> :last-child {
+    margin-left: 0px;
+  }
+
+  .footercontact>div * {
+    margin-top: 4px;
+    padding-bottom: 7px;
+  }
+
+  footer p,
+  .flinks,
+  span {
+    font-family: var(--navfont-font);
+    font-size: 15px;
+  }
+
+  footer h4 {
+    padding-bottom: 3px;
+  }
+
+  #footerlinks h5 {
+    text-align: left;
+  }
+
+  #footerlinks>div {
+    margin-left: 0%;
+  }
+
+  #footerlinks {
+    text-align: left;
+    margin: 0px;
+  }
+
+  #footerlinks p a {
+    margin-left: 4px;
+  }
+
+  .socialmedialinks i {
+    font-size: 20px;
+  }
+
+  #dreamtimepng {
+    height: 8vw;
+    right: 10px;
+    bottom: -26px;
+  }
+
+  #copyright-privacy span,
+  #copyright-privacy a {
+    font-size: 5px;
+  }
+}
+
+/* Styles for desktops (medium size) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  /*Nav Header BarCSS*/
+  /*.navLogo{
+      height:55px;
+    }  
+    .navBtn .nav-link {
+      font-size:15px;
+    } 
+
+  #dreamtimepng{
+      margin: 0px auto 0px auto;
+      width:18vw;
+      height: 8vw;
+     }*/
+
+}

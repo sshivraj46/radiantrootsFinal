@@ -1,0 +1,1029 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: var(--navfont-font);
+}
+
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+a,
+i {
+	text-decoration: none;
+	user-select: none;
+	outline: none;
+	color: white;
+}
+
+:root {
+	--primary-color: #ed1354;
+	--secondary-color: #f7f5dd;
+	--lightblack-color: #3d3c3c;
+	--shadow-color: rgba(0, 0, 0, 0.30);
+	--accent-pink: #fff4f4;
+	--sky-blue: #92dce5;
+	--lemon-yellow: #fce77d;
+	--leaf-green: #7ed957;
+	--soft-orange: #ffb347;
+	--text-dark: #295b99ff;
+	--text-light: #e4e4e4;
+	--text-black: #151515;
+	--pinkc: #fff4f4;
+
+	--navfont-font: "Poppins", sans-serif;
+	--secondary-font: "Roboto", sans-serif;
+	--primary-text: #021832;
+	--secondary-text: #caaa19;
+	--text-white: #fff;
+	--text-gray: #e4e4e4;
+}
+
+/* Size Classes */
+.navfontsize {
+	font-size: 20px;
+}
+
+.headingsize {
+	font-size: 2rem;
+}
+
+.subheadingsize {
+	font-size: 1.3rem;
+}
+
+.paratextsize {
+	font-size: 20px;
+}
+
+.subparatextsize {
+	font-size: 1.2rem;
+}
+
+/* Font Weight */
+.fw-2 {
+	font-weight: 600;
+}
+
+
+/* Color Classes */
+.primarycolor {
+	color: var(--primary-color);
+}
+
+.primarytext {
+	color: var(--primary-text);
+}
+
+.lightblack {
+	color: var(--lightblack-color);
+}
+
+/* Text Justify */
+.textjustify {
+	text-align: justify;
+}
+
+/* PopupboxBox CSS start*/
+
+/* Blur effect class */
+.blur {
+	filter: blur(5px);
+}
+
+/* Popupbox box styling */
+#popupbox {
+	background-image: url("../images/Welcome to.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: none;
+	width: 500px;
+	height: 430px;
+	position: fixed;
+	outline: 3px solid var(--primary-color);
+	outline-offset: -8px;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	transform: translate(-50%, -50%);
+	padding: 20px 30px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	z-index: 1000;
+
+}
+
+/* Overlay */
+#overlay {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+
+/* Close button */
+.close-btn {
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	transition: all 0.3s ease-out;
+}
+
+.close-btn:hover {
+	color: red;
+	transform: scale(1.2);
+}
+
+/* PopupboxBox CSS End*/
+
+/*cover-Video-text CSS*/
+.cover-Video-text {
+	width: 100%;
+	height: 40vw;
+	color: white;
+	font-family: var(--navfont-font);
+	background: rgba(175, 188, 240, 0.2);
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.cover-Video-text h1 {
+	width: 50%;
+	bottom: 30px;
+	color: white;
+	opacity: 0.9;
+	text-align: center;
+	text-shadow: 1px 1px 8px var(--lightblack-color);
+}
+
+.cover-Video-text .btn {
+	background-color: var(--primary-color);
+	border-radius: 1vw;
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.cover-Video-text a:hover {
+	transform: scale(1.2);
+}
+
+/* Welcome to Radiant Roots Section */
+.welcome-section {
+	padding: 40px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--secondary-color);
+}
+
+/* About Radiant Roots Section */
+.about-section {
+	padding: 40px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(245, 225, 228, 0.733);
+}
+
+.welcome-section .container-fluid>h2,
+.about-section .container-fluid>h2 {
+	position: relative;
+	margin-bottom: 18px;
+}
+
+.welcome-section .container-fluid>h2::after,
+.about-section .container-fluid>h2::after {
+	content: "";
+	width: 100px;
+	height: 3px;
+	background: var(--primary-color);
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.welcome-section .container-fluid>h3,
+.about-section .container-fluid>h3 {
+	text-align: center;
+	margin: 20px 0px;
+}
+
+/* Our Programmes Card CSS (Under Section 3)*/
+.cardsDiv {
+	padding: 20px;
+	background-color: #ed1354;
+	height: auto;
+	width: 100%;
+	font-family: var(--navfont-font);
+}
+
+.cardsDiv h2 {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 0.3vw;
+	background-color: var(--primary-color);
+	color: white;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	position: relative;
+	margin-bottom: 29px;
+}
+
+.cardsDiv>h2::after {
+	content: "";
+	width: 100px;
+	height: 3px;
+	background-color: white;
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.innercontainer {
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+}
+
+.item {
+	flex: 1 1 250px;
+	/* Grow, Shrink, Minimum width */
+	border-radius: 7px;
+	overflow: hidden;
+	width: 260px;
+	height: 260px;
+	background-color: #8a062b;
+	padding: 8px;
+	color: white;
+	text-align: center;
+	transition: all 0.2s linear 0s;
+}
+
+.item div {
+	width: 100%;
+	height: 75%;
+	margin-bottom: 2px;
+
+}
+
+.innercontainer .item h4,
+.innercontainer .item p {
+	margin: 6px 0px 0px 0px;
+	padding: 0px;
+	color: white;
+}
+
+.item div img {
+	display: block;
+	border-radius: 7px;
+	width: 100%;
+	height: 100%;
+	/* Maintain aspect ratio */
+	margin-bottom: 7px;
+	object-fit: cover;
+	/* Or use contain if you want full image */
+}
+
+.item:hover {
+	transform: translateY(-5px);
+}
+
+/* Trusted-preschool */
+.trusted-preschool {
+	padding: 30px 20px;
+	background-color: #F7F5DD;
+}
+
+@media (min-width: 576px) and (max-width: 1100.98px) {
+	.innercontainer {
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		align-content: center;
+		row-gap: 1rem;
+	}
+}
+
+/* Why Radiant Root Section*/
+#op1 {
+	background-color: #b81546;
+	margin-right: 10px;
+}
+
+.why {
+	width: 100%;
+	padding: 30px 20px;
+	background-color: #ed1354;
+}
+
+.why .content-section div div h3 {
+	color: #ed1354
+}
+
+.WRRIMGDIV {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.why .btn {
+	border-radius: 5px;
+	font-family: var(--navfont-font);
+	font-size: 15px;
+	color: white;
+	background-color: #ed1354;
+	;
+	box-shadow: 3px 3px 5px 0.1px #2c2b2b;
+	transition: all 50ms ease;
+	outline: 1px solid #ebeae8;
+}
+
+#op1:hover,
+#op2:hover {
+	transform: scale(1.04);
+	box-shadow: 4px 4px 5px 1px #2c2b2b;
+}
+
+.content-section {
+	display: none;
+	background-color: White;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.active-section {
+	display: block;
+}
+
+@media (max-width: 768px) {
+	.content-section {
+		padding: 10px;
+	}
+}
+
+
+/*Our Learning Philosophy*/
+.philosophymain {
+	padding: 30px 20px;
+}
+
+.philosophymain>h2 {
+	position: relative;
+	margin-bottom: 18px;
+}
+
+.philosophymain>h2::after {
+	content: "";
+	width: 100px;
+	height: 3px;
+	background: var(--primary-color);
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+.philosophymain > h3 {
+	margin: 20px;
+}
+
+.philosophies {
+	background-color: #F7F5DD;
+	padding: 40px 0px;
+	border-radius: 5px;
+	/*width: 100%;*/
+	display: flex;
+	flex-wrap: wrap;
+	/*flex-direction:row;*/
+	/*align-items: center;*/
+	justify-content: center;
+	gap: 20px;
+	overflow: hidden;
+}
+
+.philosophies>div {
+	min-width: 300px;
+	min-height: 300px;
+	width: 26%;
+	height: 22vw;
+	background-color: var(--primary-color);
+	padding: 5px 7px;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.philosophiesimg {
+	height: 85%;
+}
+
+.philosophiesimg img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.philosophies .philosophiestitle {
+	margin: 0px;
+	padding: 5px;
+	font-family: var(--navfont-font);
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.philosophiestitle h4 {
+	margin: 0px;
+	width: 100%;
+	display: flex;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	font-size: 17px;
+	padding-bottom: 0.2rem;
+	margin-top: 5px;
+}
+
+.descriptionphilosophy {
+	display: flex;
+	justify-content: center;
+	/* horizontal centering */
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #414447c9;
+	position: relative;
+	border-radius: 10px;
+	bottom: 100%;
+	opacity: 0;
+	padding: 10%;
+	text-align: center;
+	color: #F7F5DD;
+	font-weight: 500;
+	text-shadow: 0px 0px 5px rgb(0, 0, 0);
+	font-family: Poppins;
+	font-size: 18px;
+	transition: all 0.2s ease-in;
+}
+
+.philosophies>div:first-child :hover .descriptionphilosophy,
+.philosophies>div:nth-Child(2) :hover .descriptionphilosophy,
+.philosophies>div:nth-Child(3) :hover .descriptionphilosophy {
+	opacity: 0.8;
+}
+
+/*Facilities & Activities*/
+.facilities-section {
+	position: relative;
+	margin: 30px;
+	padding: 10px 10px 30px 10px;
+	background-color: var(--pinkc);
+	border-radius: 15px;
+	/*overflow: hidden;*/
+}
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+/* Animated border using pseudo-element */
+.facilities-section::after,
+.facilities-section::before {
+	box-sizing: content-box;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 2px;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -1;
+	border-radius: 15px;
+	background-image: conic-gradient(from var(--angle), #e93d71 0deg 90deg, transparent 90deg 360deg),
+		conic-gradient(from calc(var(--angle) + 90deg), rgb(104, 103, 103) 0deg 90deg, transparent 90deg 360deg),
+		conic-gradient(from calc(var(--angle) + 180deg), #e93d71 0deg 90deg, transparent 90deg 360deg),
+		conic-gradient(from calc(var(--angle) + 270deg), rgb(104, 103, 103) 0deg 90deg, transparent 90deg 360deg);
+	/*animation: 2s spin linear infinite ;*/
+	/*<---uncomment for border animation of Facilities Section*/
+}
+
+.facilities-section::before {
+	filter: blur(0.5rem);
+	opacity: 0.8;
+}
+
+/* Animation for gradient movement */
+@keyframes spin {
+	from {
+		--angle: 0deg;
+	}
+
+	to {
+		--angle: 360deg;
+	}
+}
+
+.facilities-title {
+	text-align: center;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin-top: 10px;
+	margin-bottom: 50px;
+	font-family: var(--secondary-font);
+	letter-spacing: 1px;
+	position: relative;
+}
+
+.facilities-title::after {
+	content: "";
+	width: 100px;
+	height: 3px;
+	background: var(--primary-color);
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.facilities-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 25px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.facility-card {
+	position: relative;
+	width: 270px;
+	background-color: var(--text-white);
+	border-radius: 16px;
+	overflow: hidden;
+	/*box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);*/
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.facility-img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.facility-card:hover .facility-img {
+	transform: scale(1.05);
+}
+
+.overlay-desc {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 227px;
+	background: rgba(237, 19, 84, 0.7);
+	color: var(--text-white);
+	font-size: 1.3rem;
+	font-family: var(--secondary-font);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 15px;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	box-sizing: border-box;
+	line-height: 1.4;
+	white-space: normal;
+	overflow: hidden;
+}
+
+.facility-card:hover .overlay-desc {
+	opacity: 1;
+}
+
+.facility-title {
+	text-align: center;
+	padding: 15px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: var(--lightblack-color);
+	font-family: var(--secondary-font);
+	background-color: rgba(255, 255, 255, 0.95);
+	border-top: 1px solid var(--text-gray);
+}
+
+@media (max-width: 600px) {
+	.facility-title {
+		font-size: 1rem;
+		padding: 12px;
+	}
+}
+
+.heading {
+	color: var(--primary-color);
+	font-family: "Poppins";
+}
+
+.subheading {
+	color: black;
+}
+
+.paratext {
+	color: black;
+}
+
+
+/*---------------------------Responsive CSS-------------------------------*/
+/* Styles for small devices like phones */
+@media only screen and (max-width: 600px) {
+
+	/*Nav Logo*/
+	.navLogo {
+		border-radius: 5px;
+	}
+
+	/* PopupBox css */
+	#popupbox {
+		width: 260px;
+		height: 230px;
+		outline: 2px solid var(--primary-color);
+		outline-offset: -4px;
+	}
+
+	#popupbox .close-btn {
+		font-size: 18px;
+		top: 8px;
+		right: 8px;
+	}
+
+
+	/*cover-Video-text CSS*/
+	.cover-Video-text h1 {
+		width: 70%;
+		font-size: 14px;
+		color: white;
+		opacity: 0.9;
+		margin-bottom: 3px;
+		text-align: inter-word;
+	}
+
+	.cover-Video-text .btn {
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		/* vertical alignment */
+		justify-content: center;
+		/* horizontal alignment, optional */
+		padding: 8px 3px;
+		width: 55px;
+		height: 18px;
+		font-size: 8px;
+		margin-top: 3px;
+	}
+
+	.cover-Video-text h1 a:hover {
+		transform: scale(1.1);
+	}
+
+	/*welcome-section */
+	.welcome-section,
+	.about-section {
+		padding: 25px 15px;
+	}
+
+	.welcome-section .container-fluid>h2,
+	.about-section .container-fluid>h2 {
+		margin-bottom: 20px;
+	}
+
+	.welcome-section .container-fluid>h3,
+	.about-section .container-fluid>h3 {
+		margin: 10px;
+	}
+
+	/*Programs We Offer Cards */
+	.cardsDiv>h2 {
+		margin-bottom: 20px;
+	}
+
+	.innercontainer {
+		grid-template-rows: repeat(1, 1fr);
+		grid-template-columns: repeat(1, 1fr);
+		align-content: center;
+		row-gap: 1rem;
+	}
+
+	.innercontainer .item h4,
+	.innercontainer .item p {
+		font-size: 16px;
+		margin-top: 9px;
+	}
+
+	/*Trusted-preschool*/
+	.trusted-preschool {
+		padding: 25px 15px;
+	}
+
+	.trusted-preschool .container-fluid .row::nth-Child(2) h2 {
+		background-color: red;
+		padding-top: 30px;
+	}
+
+	/*Why Choose Us Sections*/
+	#op1 {
+		margin-right: 6px;
+	}
+
+	.why .btn {
+		border-radius: 5px;
+		font-family: var(--navfont-font);
+		font-size: 11px;
+		color: white;
+		background-color: #ed1354;
+		box-shadow: 2px 3px 5px 0.8px rgb(27, 27, 27);
+		transition: all 50ms ease;
+		outline: 1px solid white;
+	}
+
+	/*Our Learning Philosophy*/
+	.philosophymain {
+		padding: 25px 15px;
+	}
+
+	.philosophymain>h2 {
+		margin-bottom: 19px;
+	}
+
+	.philosophymain>h3 {
+		padding: 4px;
+		margin-bottom: 4px;
+	}
+
+	.philosophymain>p {
+		padding: 0px 12px;
+	}
+
+	.philosophies {
+		height: auto;
+		gap: 10px;
+		flex-direction: column;
+	}
+
+	.philosophies>div {
+		align-self: center;
+	}
+
+	.philosophiestitle h4 {
+		width: 100%;
+		height: 5vw;
+		font-size: 16px !important;
+		font-weight: 600;
+	}
+
+	.descriptionphilosophy {
+		font-size: 14px;
+		position: relative;
+		border-radius: 10px;
+		bottom: 100%;
+	}
+
+	.hover-shadow {
+		margin: 0px auto;
+		width: 200px;
+		height: 150px;
+	}
+
+	/*Facilities & Activities*/
+
+
+	/* Heading Subheading and Paratext */
+	.headingsize {
+		font-size: 1.4rem;
+	}
+
+	.subheadingsize {
+		font-size: 1rem;
+	}
+
+	.paratextsize {
+		font-size: 0.8rem;
+	}
+
+	.subparatextsize {
+		font-size: 0.5rem;
+	}
+
+	/* Font Weight */
+	.fw-2 {
+		font-weight: 600;
+	}
+}
+
+/* Styles for medium devices like tablets (portrait) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+	/* PopupBox css */
+	#popupbox {
+		width: 300px;
+		height: 270px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	#popupbox .close-btn {
+		font-size: 18px;
+		top: 8px;
+		right: 8px;
+	}
+
+	#popupbox #popuplogomain {
+		width: 90px;
+	}
+
+	/*cover-Video-text CSS*/
+
+	.cover-Video-text h1 {
+		bottom: 5px;
+		font-size: 22px;
+		margin-left: 0px 0px 0px 20px;
+		color: white;
+		opacity: 0.9;
+		text-align: inter-word;
+	}
+
+	.cover-Video-text .btn {
+		padding: 2px 5px;
+		border-radius: 0.8vw;
+		font-size: 10px;
+		margin-left: 5px;
+	}
+
+	.cover-Video-text h1 a:hover {
+		transform: scale(1.1);
+	}
+
+	/* About Section */
+	.welcome-section .container-fluid>h3,
+	.about-section .container-fluid>h3 {
+		margin: 10px;
+	}
+
+	/*Programs We Offer Cards */
+	.cardsDiv>h2 {
+		margin: 20px;
+	}
+
+	.innercontainer .item h4,
+	.innercontainer .item p {
+		margin-top: 10px;
+		font-size: 16px;
+	}
+
+	/*Our Philosophy Sections*/
+	.philosophymain>h2 {
+		margin-bottom: 18px !important;
+	}
+
+	.philosophymain>h3 {
+		margin: 10px;
+	}
+
+	#WRR1 div img,
+	#WRR2 div img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.headingsize {
+		font-size: 1.4rem;
+	}
+
+	.subheadingsize {
+		font-size: 1rem;
+	}
+
+	.paratextsize {
+		font-size: 0.8rem;
+	}
+
+	.subparatextsize {
+		font-size: 0.5rem;
+	}
+
+	/* Font Weight */
+	.fw-2 {
+		font-weight: 600;
+	}
+
+}
+
+
+/* Styles for tablets (landscape) or small laptops */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+
+	/* PopupBox css */
+	#popupbox {
+		width: 500px;
+		height: 400px;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+
+	#dreamtimepng {
+		display: block;
+		margin: 20px 0 0 15%;
+		border-radius: 10px;
+		width: 140px;
+		height: 70px;
+	}
+
+	/* Our Philosophy Sections */
+	.philosophymain>h2 {
+		margin-bottom: 50px;
+	}
+
+	.philosophiestitle h4 {
+		/*margin: 5px 0px 0px 0px;*/
+		padding: 1px;
+		font-size: 1.1vw;
+	}
+}
+
+/* Styles for desktops (medium size) */
+@media only screen and (min-width: 992px) and (max-width: 1440px) {}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: "light only";
+	}
+
+	body,
+	html {
+		background-color: White !important;
+	}
+
+	#popupbox {
+		background-color: white !important;
+
+	}
+
+	#popupbox h2 {
+		color: var(--primary-color);
+		color-scheme: light only;
+	}
+
+	#popupbox .close-btn {
+		color: #a00d3a;
+	}
+}

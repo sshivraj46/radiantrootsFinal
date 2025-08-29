@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Gernal CSS */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: Poppins;
+    width: 100%;
+    height: 100vh;
+}
+
+a,i{
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+    color:white;
+    font-family:"Poppins";
+}
+a:hover{
+    color:white;
+    color:rgba(177, 176, 176, 0.808)
+}
+
+:root {
+    --primary-color: #ed1354;
+    --secondary-color: #f7f5dd;
+    --lightblack-color: #3d3c3c;
+    --shadow-color: rgba(0, 0, 0, 0.30);
+    --accent-pink: #fff4f4;
+    --sky-blue: #92dce5;
+    --lemon-yellow: #fce77d;
+    --leaf-green: #7ed957;
+    --soft-orange: #ffb347;
+    --text-dark: #295b99ff;
+    --text-light: #e4e4e4;
+    --text-black: #151515;
+    --pinkc: #fff4f4;
+    --navfont-font: "Poppins", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+    --primary-text: #021832;
+    --secondary-text: #caaa19;
+    --text-white: #fff;
+    --text-gray: #e4e4e4;
+}
+/* Size Classes */
+
+.headingsize {
+	font-size: 2rem;
+}
+
+.subheadingsize {
+	font-size: 1.5rem;
+}
+
+.paratextsize {
+	font-size: 20px;
+}
+
+.subparatextsize {
+	font-size: 1.2rem;
+}
+
+/* Font Weight */
+.fw-1 {
+    font-weight: 500;
+}
+.fw-2{
+    font-weight: 600;
+}
+.fw-3{
+    font-weight: 700;
+}
+
+/* Color Classes */
+.primarycolor{
+    color: var(--primary-color);
+}
+.primarytext{
+    color: var(--primary-text);
+}
+.lightblack{
+    color: var(--lightblack-color);
+}
+
+/* Margin Classes */
+.margintop10{
+    margin-top: 10px;
+}
+.margintop20{
+    margin-top:20px;
+}
+.margintop30{
+    margin-top:30px;
+}
+.margintop40{
+    margin-top:40px;
+}
+
+
+.coverimg{
+    background: url('../images/aboutCover.jpg') no-repeat center center;
+    background-size: cover;
+    background-position:top;
+    height: 35vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coverimg h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    width: 70vw;
+    height: 13vw;
+    font-weight: 600;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.288);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 8px black;
+    
+}
+/* All Section Title */
+.section-title{
+    position: relative;
+    margin-bottom: 30px;
+}
+.section-title::after{
+    content: '';
+    position: absolute;
+    bottom:-9px;
+    left: 50%;
+    transform: translateX(-40%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* About Radiant Roots */
+.about-description{
+    padding: 40px 30px;
+    text-align: justify;
+}
+.about-description h3{
+    margin-bottom: 20px;
+}
+/* Founder Section */
+.foundersection {
+    padding: 40px 30px;
+    background: #FFEEEE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+ }
+
+.about-founder {
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  text-shadow: 1px 1px 3px #000;
+}
+
+
+.founder-details {
+  flex: 1 1 250px;
+  text-align: center;
+  /* padding-top:7%; */
+  /* background-color: rgba(0, 0, 0, 0.15); */
+  /* backdrop-filter: blur(3px); */
+  border-radius: 15px;
+  /* box-shadow: 0 3px 10px var(--shadow-color); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .founder-details > div{
+    margin: auto 0px;
+} */
+
+.founder-details h3 {
+  margin-top: 15px;
+  text-shadow: none;
+  font-weight: 600;
+  color:var(--primary-color);
+}
+
+.founder-details p {
+  font-weight: 500;
+  text-shadow: none;
+  color: black;
+}
+
+.founder-img {
+  background:linear-gradient(to bottom right, var(--sky-blue), var(--leaf-green));
+  width: 100%;
+  max-width: 240px;
+  border-radius: 10%;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+.founder-bio {
+  flex: 2 1 500px;
+  padding: 20px;
+  text-align: justify;
+  /* background-color: rgba(0, 0, 0, 0.15); */
+  border-radius: 15px;
+  /* backdrop-filter: blur(2px); */
+  /* box-shadow: 0 3px 10px var(--shadow-color); */
+}
+
+.founder-bio p {
+  color:var(--lightblack-color);
+  text-shadow: none;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.founder-msg-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  padding: 6px 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.founder-msg-btn:hover {
+    transform: translateY(-2px);
+    color: var(--text-light);
+}
+
+/*Dream Time Section*/
+.dreamtime-section{
+    padding: 40px 30px;
+}
+.dreamtime-section p{
+    text-align: justify;
+}
+.dreamtime-section> img{
+    display: block;
+    width:50vw;
+    margin:0px auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0,0.4));
+     text-align: justify;
+}
+
+/* Mission Vision Section */
+.missionvisiondiv{
+    padding:40px 30px;
+    background: linear-gradient(to right, #e6f0fc54, #f7f0d48a, #fad9f35d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.missionvisiondiv h2{
+ margin-bottom: 40px;
+}
+.missionvisiondbtn
+{
+    margin-left: 5%;
+}
+.missionvisiondbtn .btn{
+    box-shadow: 1px 1px 1px 0.6px rgb(131, 131, 131);
+    color: white;
+    font-size: larger;
+    width:10%;
+    font-style:bold;
+    background-color: #ed1354;
+    transition: all 0.4 ease-in;
+}
+
+.missionvisiondbtn .btn:hover{
+    box-shadow:4px 1px 2px 1px rgb(110, 110, 110);
+    color: white;
+    background-color: #ac2950;
+    
+}
+
+.missionvisiondbtn .btn:active{
+    box-shadow:2px 0px 1px 1px rgb(110, 110, 110);
+    color: white;
+    background-color: #d82259;
+}
+
+.vision-mission-content {
+    display: none;
+    margin: 0 auto 7px auto;
+    border-left: 1px solid var(--primary-color);
+    width: 90%;
+    min-height: 200px;
+    padding: 0px 20px;
+}
+.vision-mission-content p{
+    text-align: justify;
+}
+.active-content {
+    display: block;
+}
+
+
+/*Learning Section */
+.learning-model-section{
+    padding: 40px 30px;
+}
+.learning-model-section > div{
+        width: 85%;
+        margin: 0px auto;
+        padding: 30px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+.learning-card {
+    min-width:240px ;
+    min-height:240px ;
+    width:22vw;
+    height:22vw;
+    padding:23px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    border: 1px solid #d1cdcf;
+    background-color:#fad9e8;
+    transition: all 0.3s ease-in;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
+}
+.learning-card:hover {
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.4));
+    cursor: pointer;
+}
+.learning-card i {
+    color: #ed1354;
+}
+.learning-card > h3 {
+    font-size: 23px;
+}
+.learning-card > p {
+    font-size: 17px;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Styles for small devices like phones */
+@media only screen and (max-width: 600px) {
+    .headingsize {
+		font-size: 1.4rem;
+	}
+
+	.subheadingsize {
+		font-size: 1rem;
+	}
+
+	.paratextsize {
+		font-size: 0.8rem;
+	}
+
+	.subparatextsize {
+		font-size: 0.5rem;
+	}
+
+	/* Font Weight */
+	.fw-2 {
+		font-weight: 600;
+	}
+
+    /* About Cover Image */
+    .coverimg{
+        height: 200px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .coverimg h1 {
+        font-size:1rem;
+        text-align: center; 
+    }   
+    .section-title{
+        margin-bottom: 20px;
+    }
+    .section-title::after{
+        width: 50px;
+    }
+    /* Aboout Sectiom */
+    .about-description{
+        padding: 25px 15px;
+    }
+     .about-description > p{
+        padding: 0px 12px   ;
+    }
+    /*Foundersection*/
+    .foundersection{
+        padding: 25px 15px;
+    }
+    .about-founder {
+      flex-direction: column;
+      margin-top:18px;
+      padding:0px;
+    }
+    
+    .founder-img {
+      max-width: 150px;
+    }
+    
+    .founder-bio {
+      padding:0px 12px;
+    }
+    .founder-msg-btn  
+    {
+        width: 180px;
+        padding: 3px 6px;
+        font-size: 0.8rem;
+    }
+    .founder-img{
+        border: 2px solid var(--primary-color);
+    }
+    /*Dreamtime-Section*/
+    .dreamtime-section{
+        padding: 25px 15px;
+    }
+    .dreamtime-section p{
+        padding: 0px 12px;
+        margin-top: 20px;
+    }
+    /*Mision Vision Section*/
+    .missionvisiondiv{
+        padding: 25px 15px;
+    }
+    .vision-mission-content{
+        width: 100%;
+        margin:0px;
+        padding: 0px 15px;
+     }
+    .missionvisiondbtn .btn{
+        width:90px;
+        font-size: 1rem;
+    }
+    
+
+    /*Learning-model-section*/
+    .learning-model-section{
+        padding: 25px 15px;
+    }
+    .learning-model-section > div{
+        margin-top: 20px;
+    }
+
+    .learning-card{
+        padding: 18px;
+        margin:0px auto;
+    }
+
+    .learning-card > h3 {
+        font-size: 13px;
+    }
+    .learning-card > p {
+        font-size: 9px;
+    }
+}    
+
+/* Styles for medium devices like tablets (portrait) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .coverimg h1 {
+        /* top:170px; */
+        padding: 15px 10% 15px 10%;
+        font-size: 1.5rem;
+        top: 200px;
+        text-align: center;
+    }
+    /* All Sections Padding CSS */
+    .about-description{
+        padding: 25px 15px;
+    }
+    .foundersection{
+        padding: 25px 15px;
+    }
+    .dreamtime-section{
+        padding: 25px 15px;
+    }
+    .missionvisiondiv{
+        padding: 25px 15px;
+    }
+    .learning-model-section{
+        padding: 25px 15px;
+    }
+    /* Founder section */
+    .foundersection img {
+        width: 70vw;
+    }
+
+    .missionvisiondbtn .btn{
+        width:100px;
+    }
+
+    /*Learning-model-section*/
+    .learning-model-section > div{
+        margin-top: 20px;
+    }
+    .learning-card > h3 {
+        font-size: 13px;
+    }
+    .learning-card > p {
+        font-size: 9px;
+    }
+
+
+    /* Text Sizes */
+    .headingsize{
+        font-size:1.4rem;
+    }
+    .subheadingsize{
+        font-size: 1rem;
+    }
+    .paratextsize{
+        font-size: 0.8rem;
+    }
+    .subparatextsize{
+        font-size: 0.5rem;
+    }
+    /* Font Weight */
+    .fw-1 {
+        font-weight: 500;
+    }
+    .fw-2{
+        font-weight: 600;
+    }
+    .fw-3{
+        font-weight: 700;
+    }
+    /* Margin Classes */
+    .margintop10{
+        margin-top: 5px;
+    }
+    .margintop20{
+        margin-top:10px;
+    }
+    .margintop30{
+        margin-top:20px;
+    }
+    .margintop40{
+        margin-top:30px;
+    }
+
+}
+
+
+/* Styles for tablets (landscape) or small laptops */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+   .headingsize{
+        font-size:1.4rem;
+    }
+    .subheadingsize{
+        font-size: 1rem;
+    }
+    .paratextsize{
+        font-size: 0.8rem;
+    }
+    .subparatextsize{
+        font-size: 0.5rem;
+    }
+    /* Font Weight */
+    .fw-1 {
+        font-weight: 500;
+    }
+    .fw-2{
+        font-weight: 600;
+    }
+    .fw-3{
+        font-weight: 700;
+    }
+    .missionvisiondbtn .btn{
+        width:100px;
+    }
+
+    .learning-card > h3 {
+        font-size: 20px;
+    }
+    .learning-card > p {
+        font-size: 14   px;
+    }
+}
+
+/* Styles for desktops (medium size) */
+@media only screen and (min-width: 992px) and (max-width: 1440px) {
+    
+
+}
+

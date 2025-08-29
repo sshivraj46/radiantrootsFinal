@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Contact Radiant Roots School Bhopal | Get in Touch Today</title>
+      <meta name="description" content="Reach out to Radiant Roots School, Bhopal for admissions, inquiries, or support. We’re here to help you with every step of your child’s learning journey."/>
+      <link rel="icon" type="image/png" href="assets/images/pageTitleIcon.png"/>
+      <!-- Bootstrap 5 CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+      <!-- Swiper CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+      <!--AOS CSS Link-->
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!-- custom CSS Files -->
+      <link rel="stylesheet" type="text/css" href="assets/css/headerFooterCSS.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/contactus.css">
+   </head>
+   <body>
+      <div id="mainContent">
+         <header class="header_wrapper navbarmain position-sticky sticky-top">
+            <nav class="navbar navbar-expand-lg px-2">
+               <div class="container-fluid">
+                  <a href="index.html"><img class="navLogo" alt="Radiant Roots School Logo" src="assets/images/RRSLogo.png" height="67" loading="lazy"/></a>
+                  <!-- Toggle Button -->
+                  <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNav()">
+                  <i id="menubtn" class="fa-solid fa-bars-staggered"></i>
+                  </button>
+                  <!-- Nav Links -->
+                  <div class="collapse navbar-collapse customnavitem" id="navbarNavAltMarkup">
+                     <ul class="navbar-nav ms-auto gap-lg-4 gap-2 text-center navFont">
+                        <li class="nav-item navBtn">
+                           <a class="nav-link" href="index.html">
+                              <div data-text="Home">Home</div>
+                              <div class="icon"><i class="fa-solid fa-house"></i></div>
+                           </a>
+                        </li>
+                        <li class="nav-item navBtn">
+                           <a class="nav-link" href="aboutus.html">
+                              <div data-text="About Us">About Us</div>
+                              <div class="icon"><i class="fa-solid fa-info-circle"></i></div>
+                           </a>
+                        </li>
+                        <li class="nav-item navBtn">
+                           <a class="nav-link" href="academics.html">
+                              <div data-text="Academics">Academics</div>
+                              <div class="icon"><i class="fas fa-book"></i></div>
+                           </a>
+                        </li>
+                        <li class="nav-item navBtn">
+                           <a class="nav-link" href="admission.html">
+                              <div data-text="Admission">Admission</div>
+                              <div class="icon"><i class="fas fa-user"></i></div>
+                           </a>
+                        </li>
+                        <!-- <li class="nav-item navBtn">
+                           <a class="nav-link" href="cheerleaders.html">
+                              <div data-text="Our Cheerleaders" style="white-space: nowrap;" >Our Cheerleaders</div>
+                              <div class="icon"><i class="fas fa-users"></i></div>
+                           </a>
+                           </li> -->
+                        <li class="nav-item navBtn">
+                           <a class="nav-link" href="contactus.html">
+                              <div data-text="Contact">Contact Us</div>
+                              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </header>
+         <section class="hero">
+            <div class="hero-content">
+               <h1>Contact Radiant Roots School</h1>
+               <p>We're here to answer any questions you may have about our school, programs, or admission process. Reach out to us and we'll respond as soon as we can.</p>
+            </div>
+         </section>
+         <div class="container">
+            <div class="contact-container">
+               <div class="map-section">
+                  <div class="section-header">
+                     <i class="fas fa-map-marker-alt headingsize"></i>
+                     <h2 class="headingsize">Our Location</h2>
+                  </div>
+                  <div class="map-container">
+                     <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.2773810353347!2d77.36697737532127!3d23.269368779001518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c693ff97b9881%3A0x20f62b7ffd5bdb73!2sRadiant%20Roots%20School!5e0!3m2!1sen!2sin!4v1753719169522!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                        <!--<div class="map-overlay">
+                           <i class="fas fa-map-pin"></i> 123 Education Street, Knowledge City
+                           </div>-->
+                     </div>
+                  </div>
+               </div>
+               <div class="form-section">
+                  <div class="section-header">
+                     <i class="fas fa-file-alt headingsize"></i>
+                     <h2 class="headingsize">Admission Enquiry</h2>
+                  </div>
+                  <!-- Form Section -->
+                  <div class="col-lg-12">
+                     <div class="d-flex flex-row">
+                        <div class="form-container text-center" id="enquiryForm">
+                           <form id="eform" onsubmit="return formSubmit(event,this)" method="post" autocomplete="off">
+                              <div class="row">
+                                 <div class="col-8">
+                                    <input id="cname" type="text" class="form-control" name="Child's Name" placeholder="Child's Name" required autocomplete="off" onkeydown="return checkAlpha(event)"/>
+                                 </div>
+                                 <div class="col-4">
+                                    <input id="cage" type="text" class="form-control" name="Age" placeholder="Age" maxlength="1" required autocomplete="off" onkeydown="return checkNum(event)"/>
+                                 </div>
+                              </div>
+                              <input id="pname" type="text" class="form-control" name="Parent's Name" placeholder="Parent's Name" required autocomplete="off" onkeydown="return checkAlpha(event)"/>
+                              <input id="mob" type="text" class="form-control" placeholder="Mobile" name="Mobile" required maxlength="10" onkeydown="return checkNum(event)"/>
+                              <input id="emailfield" type="email" class="form-control" placeholder="Email" name="Email" required autocomplete="off"/>
+                              <input id="address" type="text" class="form-control" placeholder="Address" name="Address" required autocomplete="off"/>
+                              <div class="row">
+                                 <div class="col-6">
+                                    <input id="cty" class="form-control" type="text" placeholder="City" name="City" required autocomplete="off" onkeydown="return checkAlpha(event)"/>
+                                 </div>
+                                 <div class="col-6">
+                                    <input id="pincode" class="form-control" type="text" placeholder="Pincode" name="Pin Code"required maxlength="6" autocomplete="off" onkeydown="return checkNum(event)"/>
+                                 </div>
+                              </div>
+                              <textarea id="msg" class="form-control" placeholder="Enter Message" name="msg"></textarea>
+                              <p id="form-status" class="paratextsize"></p>
+                              <button id="s-button" type="submit" class="submit-btn">submit</button>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="contact-info">
+               <div class="info-card">
+                  <i class="fas fa-phone-alt"></i>
+                  <h2>Call Us</h2>
+                  <p>+91 9243909412</p>
+               </div>
+               <div class="info-card">
+                  <i class="fas fa-envelope"></i>
+                  <h2>Write to Us</h2>
+                  <p>radiantroots.bpl@gmail.com</p>
+               </div>
+               <div class="info-card">
+                  <i class="fas fa-clock"></i>
+                  <h2>School Timings</h2>
+                  <p>Monday - Saturday: 9:00 AM - 1:00 PM</p>
+               </div>
+            </div>
+         </div>
+         <div class="whatsapp-box">
+            <span>Chat With Us</span>
+            <a class="wa-button sm" aria-label="Chat on WhatsApp" href="https://wa.me/+919243909412" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+         </div>
+         <div class="waves">
+            <img src="assets\images\wave.png" class="wave wave1"/>
+            <img src="assets\images\wave.png" class="wave wave2"/>
+            <img src="assets\images\wave.png" class="wave wave3"/>
+            <img src="assets\images\wave.png" class="wave wave4"/>
+            <img src="assets\images\wave.png" class="wave wave5"/>
+            <img src="assets\images\wave.png" class="wave wave6"/>
+         </div>
+         <footer>
+            <div class="container-fluid pt-2">
+               <div class="row">
+                  <!-- About Section -->
+                  <div class="">
+                     <h5 class="navFont">About Us</h5>
+                     <p class="footerabout" style="text-align:justify">At Radiant Roots School, our approach is child-centric. We believe that education is not one-size-fits-all. Our methods are rooted in modern pedagogical theories, fused with practical, real-world experiences that resonate with young learners.</p>
+                  </div>
+                  <!-- Quick Links Section -->
+                  <div id="footerlinks">
+                     <h5 class="navFont">Quick Links</h5>
+                     <div>
+                        <p><a class="flinks text-decoration-none" href="index.html"><span>Home</span></a></p>
+                        <p><a class="flinks text-decoration-none" href="aboutus.html"><span>About Us</span></a></p>
+                        <p><a class="flinks text-decoration-none" href="academics.html"><span>Academics</span></a></p>
+                        <p><a class="flinks text-decoration-none" href="admission.html"><span>Admission</span></a></p>
+                        <!-- <p><a class="flinks text-decoration-none" style="white-space: nowrap;" href="cheerleaders.html"><span>Our Cheerleaders</span></a></p> -->
+                        <p><a class="flinks text-decoration-none" href="contactus.html"><span>Contact Us</span></a></p>
+                     </div>
+                  </div>
+                  <!-- Contact Section -->
+                  <div class="footercontact">
+                     <h5 class="navFont">Contact Us</h5>
+                     <div>
+                        <div class="d-flex">
+                           <i class="fas fa-map-marker-alt me-2"></i>
+                           <span>HC-45 Lake View, NRI Colony,<br/>VIP Road, Bhopal - 462001</span>
+                        </div>
+                        <div class="d-flex">
+                           <i class="fa-solid fa-phone me-2"></i>
+                           <span>+91-9243909412</span>
+                        </div>
+                        <div class="d-flex">
+                           <i class="fas fa-envelope me-2"></i>
+                           <a id="footeremail" href="mailto:info@radiantrootsschool.com" target="_blank">
+                           <span>radiantroots.bpl@gmail.com</span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Stay Connected Section -->
+                  <div id="stay-connected" class="">
+                     <h5 class="mb-3 navFont">Stay Connected</h5>
+                     <a href="https://www.facebook.com/radiantroots.bpl" class="socialmedialinks me-3 text-light fs-4"><i class="p-2 fab fa-facebook"></i></a>
+                     <a href="https://www.instagram.com/radiantroots_bpl" class="socialmedialinks me-3 text-light fs-4"><i class="p-2 fab fa-instagram"></i></a>
+                     <a href="https://www.linkedin.com/company/radiant-roots-bpl/" class="socialmedialinks text-light fs-4"><i class="p-2 fa-brands fa-linkedin-in"></i></a>
+                     <img id="dreamtimepng" src="assets/images/oie_MoMbCDr2Ai4u.png" class="img-fluid" alt="Dream Time Learning Logo" loading="lazy"/>
+                  </div>
+               </div>
+            </div>
+            <!-- Footer Bottom Row -->    
+            <div id="copyright-privacy" class="col-12 text-center">
+               <span>Copyright &copy 2025 Radiant Roots School. All rights reserved. </span>
+               <span><a href="#">Privacy Policy</a></span>
+            </div>
+         </footer>
+      </div>
+      <!-- Scripts (Bootstrap 5 Bundle contains Popper too) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- jQuery (if needed for your custom JS) -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <!-- Custom JS -->
+      <script src="assets/js/contactus.js"></script>
+      <script src="assets/js/headerFooterJs.js"></script>
+      <!--AOS Scripts Link-->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>AOS.init();</script>
+   </body>
+</html>
